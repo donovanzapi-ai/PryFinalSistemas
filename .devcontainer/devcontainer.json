@@ -1,0 +1,26 @@
+{
+  "name": "Java & Spring Boot Development",
+
+  // Imagen base con Java 17 (puedes cambiar '17' por '21' según tu proyecto)
+  "image": "mcr.microsoft.com/devcontainers/java:17-bullseye",
+
+  // Configuración y extensiones de VS Code en el contenedor
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",         // Soporte general para Java (Language Support, Debugger, Maven)
+        "vmware.vscode-spring-boot-pack"    // Herramientas para Spring Boot (Dashboard, Snippets, Navegación)
+      ]
+    }
+  },
+
+  // Puertos expuestos para probar la API de Spring Boot
+  "forwardPorts": [8080],
+
+  // Usuario no-root para mantener buenas prácticas de seguridad
+  "remoteUser": "vscode"
+}
